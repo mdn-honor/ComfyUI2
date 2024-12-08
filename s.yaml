@@ -1,0 +1,19 @@
+edition: 1.0.0
+name: my-framework-app
+access: default
+services:
+  framework:
+    component: fc
+    props:
+      region: cn-hangzhou
+      service:
+        name: serverless-devs-application
+      function:
+        name: ComfyUI2-vpoh
+        description: Initialize
+        runtime: python3.9
+        memorySize: 32768
+        cpu: 16
+        timeout: 60
+        codeUri: ./
+        diskSize: 10240
